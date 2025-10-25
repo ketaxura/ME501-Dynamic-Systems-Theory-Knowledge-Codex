@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{ME501 Knowledge Vault}
+\author{Usukhbayar Amgalanbat}
+\date{October 2025}
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{System Representation}
+
+A dynamic system can be represented in two different ways:  
+in \textbf{state-space representation} or in \textbf{transfer function / frequency representation}.
+
+\subsection*{State Representation Types}
+
+State representation itself splits into two different types:
+
+\begin{itemize}
+    \item \textbf{LTI} — Linear Time-Invariant
+    \item \textbf{LTV} — Linear Time-Varying
+\end{itemize}
+
+\subsection*{LTI System}
+
+\begin{equation}
+    \dot{x} = A x(t) + B u(t)
+\end{equation}
+
+\begin{equation}
+    y = Cx
+\end{equation}
+
+\subsection*{LTV System}
+
+\begin{equation}
+    \dot{x} = A(t)x(t) + B(t)u(t)
+\end{equation}
+
+\begin{equation}
+    y = C(t)x(t)
+\end{equation}
+
+LTI systems do not have their system matrices varying with time.  
+That is, \(A, B, C, D\) do not vary with time.
+
+\subsection*{System Matrices \(A, B, C, D\)}
+
+\textbf{A:} Explains how the state vector \(x(t)\) and its changes actually affect the system's future behavior.  
+Systems builds on itself and evolves based on its past values over time.  
+The \(A\) matrix defines how the past/current state vector influences the future system state and behavior.  
+This matrix is crucial for modeling and predicting the system.  
+For simple systems without a control input component, matrix \(A\) is the model and prediction mechanism.
+
+\[
+A \in \mathbb{R}^{n \times n}
+\]
+
+
+
+\end{document}
